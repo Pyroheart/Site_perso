@@ -1,0 +1,229 @@
+/* *****************************************************************
+CONTAINER
+***************************************************************** */
+
+/* Le container permet de limiter la largeur d'un contenu */
+
+.container {
+	/* max-width: 1100px; On donne une largeur au container */
+	margin-left: auto; /* On centre son contenu */
+	margin-right: auto;
+}
+
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+	font-family: 'Athiti', sans-serif;
+	font-family: 'Press Start 2P', cursive;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+	min-width: 1000px;
+}
+
+body {
+	font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+}
+
+
+#recommended {
+	color: white;
+}
+
+body{
+    text-align:center;
+	background-color: black;
+	
+}
+
+h1 {
+	color: white;
+	line-height: 1.5;
+}
+
+ul {
+	text-align: left;
+	line-height: 1.5;
+}
+li + li {
+	padding: 2rem 0;
+}
+
+#howTo, #credits {
+	color: white;
+	margin-bottom: 10rem;
+}
+
+#credits {
+	width: 50%;
+	margin-top: 10rem;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+#howTo {
+	max-width: 50%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#howTo img {
+	max-width: 10rem;
+	float: left;
+}
+
+#interact img {
+	width: 5rem;
+}
+
+#basics img {
+	width: 5rem;
+}
+
+.sectionTitles {
+	font-size: 2rem;
+	text-decoration: underline;
+}
+
+#movements {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+
+.howToInsideContainer {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+  }
+
+.image {
+	padding-right: 0.5rem;
+	padding-bottom: 0.5rem;
+	max-width: 10rem;
+  }
+.text {
+	padding-left: 0
+  }
+
+
+
+
+
+
+button {
+	border: 0
+}
+
+button:hover {
+	background-color: #ccc;
+}
+
+.parentDiv {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+}
+
+#overlappingDiv {
+	background-color: black;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#characterDialogueBox {
+	background-color: white;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 4px black solid;
+    display: none;
+    flex-wrap: wrap;
+    padding: 12px;
+	overflow: hidden;
+	max-width: 100%;
+	line-height: 1.5;
+}
+
+#areaDiv {
+	background-color: white;
+    height: 0px;
+	overflow:hidden;
+    position: absolute;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 4px black solid;
+	border-right: 4px black solid;
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 0px; 
+	overflow: hidden;
+	max-width: 20%;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+}
+
+
+
+
+
+#rightPad {
+	position: relative;
+
+}
+
+#enterButton {
+	position: absolute;
+	padding: 2rem;
+	color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.1);
+	bottom: 115px;
+	left: 80%
+}
+
+
+
+#directionalPad {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	overflow: hidden;
+	top: 60%;
+	left: 5%;
+  }
+  
+  .row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .button {
+	height: 50px;
+	border-radius: 50%;
+	padding: 2rem;
+	z-index: 10001;
+	color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.1);
+  }
+  
+  /* .center {
+	background-color:rgba(255,255,255,0);
+  } */

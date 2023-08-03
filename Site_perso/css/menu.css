@@ -1,0 +1,94 @@
+/* Menu */
+input[type="checkbox"]{
+	display: none;
+  }
+  
+  .wrapper{
+    visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  /*   clip-path: circle(25px at calc(0% + 45px) 45px); */
+	background: linear-gradient(7deg, rgba(113,233,119,1) 45%, rgba(49,136,171,1) 86%);
+	clip-path: circle(25px at calc(0% + 45px) 45px);
+	transition: all 0.4s ease-in-out;
+  }
+  
+  /* Reveal menu */
+  #active:checked ~ .wrapper{
+	clip-path: circle(75%);
+	visibility: visible;
+  }
+  
+
+  .menu-btn{
+	position: absolute;
+	z-index: 2;
+	right: 20px;
+	left: 20px;
+	top: 20px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	background: linear-gradient(7deg, rgba(113,233,119,0.9108018207282913) 45%, rgba(49,136,171,1) 86%);
+	transition: all 0.3s ease-in-out;
+  }
+  
+  
+  #active:checked ~ .menu-btn{
+	color: #fff;
+  }
+  
+  .menu-btn i:before{
+	content: "\f00d";
+  }
+  
+  
+  .wrapper #menuList{
+	text-align: center;
+  }
+  
+  
+  .wrapper #menuList a{
+	margin: 15px 0;
+	color: none;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 5px 30px;
+	color: #fff;
+	border-radius: 50px;
+	background: #000;
+	position: relative;
+	line-height: 50px;
+	transition: all 0.3s ease;
+  }
+  
+  .wrapper #menuList a:after{
+	position: absolute;
+	content: "";
+	background: black;
+	width: 104%;
+	height: 108%;
+	left: -2%;
+	top: -4%;
+	border-radius: 50px;
+	transform: scaleY(0);
+	z-index: -1;
+	transition: transform 0.4s ease;
+  }
+  .wrapper #menuList a:hover:after{
+	transform: scaleY(1);
+  }
+  
+  .wrapper #menuList a:hover{
+	color: black;
+	background-color: #fff;
+  }

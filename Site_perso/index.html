@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/menu.css">
+        
+    </head>
+        <body>
+
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+            <div class="wrapper">
+              <div id="menuList">
+                <a href="#">Interactive Resume</a>
+                <a href="menu/Puzzle_Game/PuzzleGame.html">Puzzle game</a>
+              </div>
+            </div>
+
+            <h1>interactive resume</br>made by Samuel Alleaume</h1>
+            <p id="recommended">Google Chrome recommanded</p>
+
+            <!-- jeu -->
+            <div class="parentDiv">
+                <div id="overlappingDiv"></div>
+                <div id="areaDiv"></div>
+                <canvas></canvas>
+            
+                <div id="characterDialogueBox"></div>
+            </div>
+
+            <div id="directionalPad">
+                <div class="row">
+                  <button class="button up" id="buttonUp">up</button>
+                </div>
+                <div class="row">
+                  <button class="button left" id="buttonLeft">left</button>
+                  <button class="button center" id="buttonMiddle">stop</button>
+                  <button class="button right" id="buttonRight">right</button>
+                </div>
+                <div class="row">
+                  <button class="button down" id="buttonDown">down</button>
+                </div>
+              </div>
+            <div id="rightPad">
+                <button id="enterButton">Interact</button>
+            </div>
+
+            <!-- sous le jeu -->
+            <article id="howTo">
+                <section id="basics">
+                    <div class="howToInsideContainer">
+                        <div class="image">
+                            <img src="assets/other/img_HTML/click.png"alt="mouse click">
+                        </div>
+                        <div class="text">
+                            <p>click on the window to activate ambiance music</p>
+                        </div>
+                    </div>
+
+                <section id="movements">
+                    <p class="sectionTitles">How to move:</p>
+                    <div class="howToInsideContainer">
+                        <div class="image">
+                            <img src="assets/other/img_HTML/keyboard_zqsd.png"alt="keyboard's z q s d keys">
+                        </div>
+                        <div class="text">
+                            <p>ZQSD</p>
+                        </div>
+                    </div>
+                    <div class="howToInsideContainer">
+                        <div class="image">
+                            <img src="assets/other/img_HTML/keyboard_arrow.png"alt="virtual joystick image">
+                        </div>
+                        <div class="text">
+                            <p>Arrows also work.</p>
+                        </div>
+                    </div>
+                    <div class="howToInsideContainer">
+                        <div class="image">
+                            <img src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2023/03/touch-virtual-joystick.webp?fit=776%2C611&ssl=1"alt="keyboard's arrow keys">
+                        </div>
+                        <div class="text">
+                            <p>Directional  Pad  available.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id ="interact">
+                    <p class="sectionTitles">How to interact:</p>
+                    <div class="howToInsideContainer">
+                        <div class="image">
+                            <img src="assets/other/img_HTML/keyboard_e.png"alt="keyboard's e keys">
+                        </div>
+                        <div class="text">
+                            <p>to interact</p>
+                        </div>
+                    </div>
+                    <div class="howToInsideContainer">
+                        <div class="image">
+                            <img src="assets/other/img_HTML/keyboard_enter.png"alt="keyboard's e keys">
+                        </div>
+                        <div class="text">
+                            <p>also to interact</p>
+                        </div>
+                    </div>
+                    <div class="howToInsideContainer">
+                        <div class="text">
+                            <p>And the button "interact"</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+
+            <section id="credits">
+                <p class="sectionTitles">credits:</p>
+                <ul>
+                    <li>My training course teacher François G.</li>
+                    <li>Chris courses taught me a lot while doing this. <a href="//www.youtube.com/@ChrisCourses">His YouTube Channel</a></li>
+                    <li>Assets from <a href="https://cypor.itch.io/12x12-rpg-tileset">Itch.io</a> but some of the tiles were made / retouched by myself</li>
+                    <li>Music made on <a href="https://typatone.com/m/BO58GNGVbT"> Typatone </a> </li>
+                </ul>
+            </section>
+
+
+            <!-- avantages pour la gestion par rapport a audio de base -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!-- Animation  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+
+            <!-- Les scripts sont volontairement hors modules pour pouvoir y accéder sans serveur local -->
+            <script type="text/javascript" src="js/Buttons/enterButton.js"></script> 
+            <script type="text/javascript" src="js/Buttons/buttonUp.js"></script>
+            <script type="text/javascript" src="js/Buttons/buttonLeft.js"></script>
+            <script type="text/javascript" src="js/Buttons/buttonRight.js"></script>
+            <script type="text/javascript" src="js/Buttons/buttonDown.js"></script>
+            <script type="text/javascript" src="js/Buttons/buttonMiddle.js"></script> 
+
+            <script src="data/collisions.js"></script>
+            <script src="data/areasPopUp.js"></script>
+            <script src="data/collisionsHouse.js"></script>
+            <script src="data/houseEntrances.js"></script>
+            <script src="data/collisionsHouseLeaving.js"></script>
+            <script src="data/audio.js"></script>
+            <script src="data/characters.js"></script>
+            
+            <script src="js/functions/rectangluarCollisions.js"></script>
+            <script src="js/functions/checkForCharacterCollision.js"></script>
+
+            <script src="js/Classes/Sprite.js"></script>
+            <script src="js/Classes/Character.js"></script>
+            <script src="js/Classes/Boundary.js"></script>
+            <script src="js/app.js"></script>
+            <!-- <script type="module" src="js/app.js"></script> -->
+
+        </body>
+
+
+</html>
