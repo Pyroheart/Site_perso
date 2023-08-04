@@ -10,8 +10,7 @@ input[type="checkbox"]{
 	left: 0;
 	height: 100%;
 	width: 100%;
-  /*   clip-path: circle(25px at calc(0% + 45px) 45px); */
-	background: linear-gradient(7deg, rgba(113,233,119,1) 45%, rgba(49,136,171,1) 86%);
+	background: linear-gradient(7deg, rgba(13,12,29,1) 0%, rgba(71,73,115,1) 15%, rgba(241,218,196,1) 52%);
 	clip-path: circle(25px at calc(0% + 45px) 45px);
 	transition: all 0.4s ease-in-out;
   }
@@ -35,9 +34,9 @@ input[type="checkbox"]{
 	line-height: 50px;
 	border-radius: 50%;
 	font-size: 20px;
-	color: black;
+	color: #474973;
 	cursor: pointer;
-	background: linear-gradient(7deg, rgba(113,233,119,0.9108018207282913) 45%, rgba(49,136,171,1) 86%);
+	background: #0D0C1D;
 	transition: all 0.3s ease-in-out;
   }
   

@@ -2,6 +2,25 @@
 CONTAINER
 ***************************************************************** */
 
+/* :root {
+	--main-bg-color: #84DCC6;
+	--main-txt-color: #8B95C9;
+	--main-btn-color: #478978;
+	--main-btn-hover-color: #698FA1;
+	--main-link-color: #698FA1;
+	--main-visited-link-color: #2F424B;
+  } */
+
+  :root {
+	--main-bg-color: #F1DAC4;
+	--main-txt-color: #474973;
+	--main-btn-color: #0D0C1D;
+	--main-btn-hover-color: #161B33;
+	--main-link-color: #A69CAC;
+	--main-visited-link-color: #161B33;
+  }
+
+
 /* Le container permet de limiter la largeur d'un contenu */
 
 .container {
@@ -23,22 +42,36 @@ html {
 
 body {
 	font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+    text-align:center;
+	background-color: var(--main-bg-color);
 }
 
+a:link {
+	color: var(--main-link-color);
+}
+
+a:visited, a:hover, a:active {
+	color: var(--main-visited-link-color);
+}
+
+
+img {
+	padding-right: 1rem;
+}
+
+
+canvas {
+	border: solid black;
+}
 
 #recommended {
-	color: white;
+	color: var(--main-txt-color);
 }
 
-body{
-    text-align:center;
-	background-color: black;
-	
-}
 
 h1 {
-	color: white;
 	line-height: 1.5;
+	color: var(--main-txt-color);
 }
 
 ul {
@@ -50,7 +83,7 @@ li + li {
 }
 
 #howTo, #credits {
-	color: white;
+	color: var(--main-txt-color);
 	margin-bottom: 10rem;
 }
 
@@ -120,7 +153,7 @@ button {
 }
 
 button:hover {
-	background-color: #ccc;
+	background-color: var(--main-btn-hover-color);
 }
 
 .parentDiv {
@@ -147,7 +180,7 @@ button:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 4px black solid;
+    border: 4px black solid;
     display: none;
     flex-wrap: wrap;
     padding: 12px;
@@ -165,8 +198,7 @@ button:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: 4px black solid;
-	border-right: 4px black solid;
+    border: 4px black solid;
     display: inline-block;
     flex-wrap: wrap;
     padding: 0px; 
@@ -190,7 +222,7 @@ button:hover {
 	position: absolute;
 	padding: 2rem;
 	color: rgba(255,255,255,1);
-	background-color: rgba(255,255,255,0.1);
+	background-color: var(--main-btn-color);
 	bottom: 115px;
 	left: 80%
 }
@@ -221,7 +253,7 @@ button:hover {
 	padding: 2rem;
 	z-index: 10001;
 	color: rgba(255,255,255,1);
-	background-color: rgba(255,255,255,0.1);
+	background-color: var(--main-btn-color);
   }
   
   /* .center {

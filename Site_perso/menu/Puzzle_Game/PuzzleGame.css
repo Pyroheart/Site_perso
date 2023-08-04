@@ -1,0 +1,88 @@
+:root {
+	--main-bg-color: #F1DAC4;
+	--main-txt-color: #474973;
+	--main-btn-color: #0D0C1D;
+	--main-btn-hover-color: #161B33;
+	--main-link-color: #A69CAC;
+	--main-visited-link-color: #161B33;
+}
+
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+	/* font-family: 'Athiti', sans-serif;
+	font-family: 'Press Start 2P', cursive; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: var(--main-bg-color);
+    font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+    color: var(--main-txt-color);
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+	min-width: 1000px;
+}
+
+#canvas {
+    background-color: #F4F4F4;
+    border: solid #2F424B;
+}
+
+
+/* .puzzleCarousel {
+    margin-top: 10rem;
+} */
+
+
+.ProblemFixes {
+    margin-top: 1rem;
+    border: solid #2F424B;
+    border-radius: 10% / 50%;
+    overflow: hidden;
+  }
+
+h2 {
+    text-decoration: underline;
+}
+
+.problem {
+    text-align: justify;
+    margin: 0 auto;
+    width: 30em;
+}
+
+.problemTitle {
+    cursor: help;
+    text-align: center;
+    background-color: var(--main-btn-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.problemSolved {
+    overflow: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
+    text-align: center;
+    background-color: #CCBBB8;
+    padding: 0rem;
+    border-radius: 10px;
+    margin-top: 0;
+    transition: transform 0.5s ease-in-out, max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    max-height: 0;
+}
+
+.problem:hover .problemSolved {
+    transform: scaleY(1);
+    padding: 1rem;
+    max-height: 100px; 
+}
+
+.problemTitle:hover {
+    background-color: var(--main-btn-hover-color);
+}
