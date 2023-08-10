@@ -87,25 +87,25 @@ h2 {
     background-color: var(--main-btn-hover-color);
 }
 
-/* Styles for the canvas */
-#canvas {
+/* Styles for the canvas but I need to fix pieces selection so that the media queries doesn't break it*/
+/* #canvas {
     width: 1000px;
     height: 600px;
-  }
+  } */
   
   /* Media query for mobile devices */
-  @media only screen and (max-width: 800px) {
+/*   @media only screen and (max-width: 800px) {
     #canvas {
       width: 750px;
       height: 450px;
     }
-  }
+  } */
 
   /* Media query for mobile devices */
-  @media only screen and (max-width: 500px) {
+/*   @media only screen and (max-width: 500px) {
     #canvas {
       width: 500px;
       height: 300px;
     }
-  }
+  } */
   
