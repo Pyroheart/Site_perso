@@ -152,14 +152,22 @@ function restart(newHeight, newWidth, img) {
 
 // Check if the puzzle is solved
 function checkSolved() {
-  const tolerance = 5;
+  const tolerance = 15;
+  let allSolved = true;
   for (let i = 0; i < pieces.length; i++) {
     const piece = pieces[i];
-    if (Math.abs(piece.x - piece.imageX) > tolerance || Math.abs(piece.y - piece.imageY) > tolerance) {
-      return false;
+    if (!piece.solved) {
+      if (Math.abs(piece.x - piece.imageX) <= tolerance && Math.abs(piece.y - piece.imageY) <= tolerance) {
+        // Snap the unsolved piece to its correct position
+        piece.x = piece.imageX;
+        piece.y = piece.imageY;
+      } else {
+        allSolved = false; // Set allSolved to false if any piece is not in its correct position
+      }
     }
   }
-  return true;
+  drawPieces();
+  return allSolved; // Return true only if all pieces are in their correct positions
 }
 
 
